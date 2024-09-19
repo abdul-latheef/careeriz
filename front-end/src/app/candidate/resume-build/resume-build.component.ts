@@ -84,5 +84,8 @@ export class ResumeBuildComponent {
 
   // Industry Domains
   industryDomains: string[] = ['Technology', 'Finance', 'Healthcare', 'Education', 'Manufacturing'];
+
+  placementStatus: string = '';  // Variable to store selected placement status
+
    
 }
