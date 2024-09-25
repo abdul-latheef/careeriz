@@ -74,11 +74,35 @@
                     <mat-card-title>Recent Job</mat-card-title>
                 </mat-card-header>
                 <mat-list>
+                    <a mat-list-item class="mb-0 pb-0" href="javascript:void(0)">Job 1</a>
+                    <div class="p-2">
+                      <p>
+                        <!-- Display part of the paragraph when collapsed, and full content when expanded -->
+                        {{ paragraph | slice:0:(isExpanded ? paragraph.length : 40) }}
+                        <span *ngIf="!isExpanded">...</span>
+                      </p>
+                    
+                      <!-- Toggle button to expand/collapse content -->
+                      <button mat-button (click)="toggleReadMore()">
+                        {{ isExpanded ? 'Read less' : 'Read more' }}
+                      </button>
+                    </div>                    
+                    <mat-divider class="ms-1 me-1"></mat-divider>
                     <mat-list-item>Job 1</mat-list-item>
-                    <mat-divider></mat-divider>
-                    <mat-list-item>Job 1</mat-list-item>
-                    <mat-divider></mat-divider>
-                    <mat-list-item>Job 1</mat-list-item>
+                    <div class="p-2">
+                      <p>
+                        <!-- Display part of the paragraph when collapsed, and full content when expanded -->
+                        {{ paragraph | slice:0:(isExpanded ? paragraph.length : 40) }}
+                        <span *ngIf="!isExpanded">...</span>
+                      </p>
+                    
+                      <!-- Toggle button to expand/collapse content -->
+                      <button mat-button (click)="toggleReadMore()">
+                        {{ isExpanded ? 'Read less' : 'Read more' }}
+                      </button>
+                    </div> 
+                    <!-- <mat-divider></mat-divider>
+                    <mat-list-item>Job 1</mat-list-item> -->
                   </mat-list>
             </mat-card>
             
