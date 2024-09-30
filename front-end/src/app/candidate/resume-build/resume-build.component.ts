@@ -15,12 +15,13 @@ import {MatIconModule} from '@angular/material/icon';
 import { JsonPipe } from '@angular/common';
 import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { ResumeBuildDetailsComponent } from "../resume-build-details/resume-build-details.component";
 
 @Component({
   selector: 'app-resume-build',
   standalone: true,
   providers: [provideNativeDateAdapter()],
-  imports: [MatCardModule, MatDividerModule, MatButtonModule, MatListModule, MatInputModule, MatFormFieldModule, MatSelectModule, MatDatepickerModule, MatRadioModule, MatCheckboxModule, FormsModule, JsonPipe, ReactiveFormsModule,MatIconModule,CommonModule],
+  imports: [MatCardModule, MatDividerModule, MatButtonModule, MatListModule, MatInputModule, MatFormFieldModule, MatSelectModule, MatDatepickerModule, MatRadioModule, MatCheckboxModule, FormsModule, JsonPipe, ReactiveFormsModule, MatIconModule, CommonModule, ResumeBuildDetailsComponent],
   templateUrl: './resume-build.component.html',
   styleUrl: './resume-build.component.scss'
 })

@@ -1,0 +1,172 @@
+<!-- Sidebar -->
+<div class="sidebar">
+    <!-- <img src="assets/image/logo.svg" alt="logo" class="logo"> -->
+     <h5 class="text-danger text-center mb-3">Careeriz</h5>
+    <div class="container">
+        <div class="careers-sidebar">
+            <ul class="stepper">
+                <li class="stepper-item active">
+                    <span class="step-counter">1</span>
+                    <div class="step-label">Heading</div>
+                </li>
+                <li class="stepper-item">
+                    <span class="step-counter">2</span>
+                    <div class="step-label">Work history</div>
+                </li>
+                <li class="stepper-item">
+                    <span class="step-counter">3</span>
+                    <div class="step-label">Education</div>
+                </li>
+                <li class="stepper-item">
+                    <span class="step-counter">4</span>
+                    <div class="step-label">Skills</div>
+                </li>
+                <li class="stepper-item">
+                    <span class="step-counter">5</span>
+                    <div class="step-label">Summary</div>
+                </li>
+                <li class="stepper-item">
+                    <span class="step-counter">6</span>
+                    <div class="step-label">Finalize</div>
+                </li>
+            </ul>
+            <div class="sidebar-footer">
+                <p class="mb-0"><a href="#" class="text-decoration-none text-white">Terms and Conditions</a></p>
+                <p class="mb-0"><a href="#" class="text-decoration-none text-white">Privacy Policy</a></p>
+                <p class="mb-0"><a href="#" class="text-decoration-none text-white">Accessibility</a></p>
+                <p class="mb-0"><a href="#" class="text-decoration-none text-white">Contact Us</a></p>
+                <p class="mt-3">© 2024, Works Limited. <br> All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Main content -->
+<div class="content">
+    <div class="container">
+        <div class="mt-4">
+            <div class="row">
+                <div class="col-md-8">
+                    <mat-card-title class="fs-4">Fill up the details manually</mat-card-title>
+                    <div class="row mt-3">
+                        <div class="col-md-6">
+                            <mat-form-field appearance="outline">
+                                <mat-label>First Name</mat-label>
+                                <input matInput>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-6">
+                            <mat-form-field appearance="outline">
+                                <mat-label>Last Name</mat-label>
+                                <input matInput>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-md-12">
+                            <mat-form-field appearance="outline">
+                                <mat-label>Profession</mat-label>
+                                <input matInput>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-md-6">
+                            <mat-form-field appearance="outline">
+                                <mat-label>Enter your email</mat-label>
+                                <input matInput placeholder="pat@example.com" required />
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-6">
+                            <mat-form-field appearance="outline">
+                                <mat-label>Phone Number</mat-label>
+                                <input matInput type="tel">
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-md-12">
+                            <mat-form-field class="example-full-width" appearance="outline">
+                                <mat-label>Address</mat-label>
+                                <textarea matInput></textarea>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-md-6">
+                            <mat-form-field appearance="outline">
+                                <mat-label>Any Work Permit Holding?</mat-label>
+                                <mat-select>
+                                    <mat-option value="yes">Yes</mat-option>
+                                    <mat-option value="no">No</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-6">
+                            <mat-form-field class="example-full-width" appearance="outline">
+                                <!-- Input field showing the selected values -->
+                                <mat-select placeholder="Language Knows" multiple [(ngModel)]="selectedItems">
+                                    <!-- Loop through the dropdownItems array and add a checkbox for each option -->
+                                    <mat-option *ngFor="let item of dropdownItems" [value]="item">
+                                        {{ item }}
+                                    </mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-md-6">
+                            <mat-form-field appearance="outline">
+                                <mat-label>Gender</mat-label>
+                                <mat-select>
+                                    <mat-option value="male">Male</mat-option>
+                                    <mat-option value="female">Female</mat-option>
+                                    <mat-option value="transgender">TransGender</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-6">
+                            <mat-form-field appearance="outline">
+                                <mat-label>Marital Status</mat-label>
+                                <mat-select>
+                                    <mat-option value="married">Married</mat-option>
+                                    <mat-option value="unmarried">Unmarried</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="">
+                        <p>Our Resume Builder delivers results †</p>
+                        <!-- <div class="notify-section border w-75  rounded-pill bg-danger">
+                            <p class="text-center mt-2 text-white">lorem ipsum dolor sit</p>
+                        </div> -->
+                        <div class="resume-template mt-3">
+                            <img src="https://placehold.co/280x350" alt="">
+                        </div>
+                        <div class="mt-3">
+                            <a href="#">Change template</a>
+                        </div>
+                        <div class="mt-3 w-75 ">
+                            <p> The results are based on a study with over 1000 participants, among whom 287 used resume
+                                tools provided on our family sites.</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-2 pb-5">
+                <div class="col-md-8">
+                    <div class="btn btn-primary w-50 btn-lg rounded-pill">Optional: Personal Details</div>
+                </div>
+                <div class="col-md-4">
+                    <div class="btn btn-warning w-50 btn-lg rounded-pill">Next</div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+</div>

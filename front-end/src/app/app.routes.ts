@@ -3,23 +3,29 @@ import { LoginComponent } from './auth/login/login.component';
 import { DashboardComponent } from './candidate/dashboard/dashboard.component';
 import { HomeFeedComponent } from './candidate/home-feed/home-feed.component';
 import { ResumeBuildComponent } from './candidate/resume-build/resume-build.component';
+import { ResumeBuildDetailsComponent } from './candidate/resume-build-details/resume-build-details.component';
 export const routes: Routes = [
-    {path: '', component: LoginComponent},
-    {
-        path: 'candidate',
-        children: [
-          {
-            path: 'dashboard',
-            component: DashboardComponent,
-          },
-          {
-            path:'home-feed',
-            component: HomeFeedComponent
-          },
-          {
-            path:'resume-build',
-            component: ResumeBuildComponent
-          }
-        ],
+  { path: '', component: LoginComponent },
+  {
+    path: 'resume-build-details',
+    component: ResumeBuildDetailsComponent
+  },
+  {
+    path: 'candidate',
+    children: [
+      {
+        path: 'dashboard',
+        component: DashboardComponent,
       },
+      {
+        path: 'home-feed',
+        component: HomeFeedComponent
+      },
+      {
+        path: 'resume-build',
+        component: ResumeBuildComponent
+      },
+
+    ],
+  },
 ];
