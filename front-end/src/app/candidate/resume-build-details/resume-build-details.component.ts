@@ -13,7 +13,7 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatIconModule } from '@angular/material/icon';
 import { JsonPipe } from '@angular/common';
-import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
+import { FormBuilder, ReactiveFormsModule,FormGroup, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -30,4 +30,40 @@ export class ResumeBuildDetailsComponent {
 
   // List of options in the dropdown
   dropdownItems: string[] = ['English', 'Arabic', 'Spanish', 'Other'];
+
+  multiStepForm: FormGroup;
+  currentStep: number = 1;
+
+  constructor(private fb: FormBuilder) {
+    this.multiStepForm = this.fb.group({
+      name: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]]      
+    });
+  }
+
+  nextStep() {
+    if (this.currentStep < 3) {
+      this.currentStep++;
+    }
+  }
+
+  previousStep() {
+    if (this.currentStep > 1) {
+      this.currentStep--;
+    }
+  }
+
+  onSubmit() {
+    if (this.multiStepForm.valid) {
+      console.log('Form submitted:', this.multiStepForm.value);
+    }
+  }
+
+  // Declare the profileSummary property
+  profileSummary: string = '';
+
+  // Industry Domains
+  industryDomains: string[] = ['Technology', 'Finance', 'Healthcare', 'Education', 'Manufacturing'];
+
+  placementStatus: string = '';  // Variable to store selected placement status
 }

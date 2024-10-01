@@ -5,20 +5,12 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 
 @Component({
-  selector: 'app-login',
+  selector: 'app-employee-login',
   standalone: true,
   imports: [MatSelectModule, MatInputModule, MatInputModule,MatFormFieldModule],
-  templateUrl: './login.component.html',
-  styleUrl: './login.component.scss'
+  templateUrl: './employee-login.component.html',
+  styleUrl: './employee-login.component.scss'
 })
-export class LoginComponent {
-  constructor(private router: Router) { }
+export class EmployeeLoginComponent {
 
-  redirectToPage() {
-    this.router.navigate(['candidate/dashboard']);
-  }
-
-  redirectToEmpLoginPage(){
-    this.router.navigate(['candidate/employee-login'])
-  }
 }
