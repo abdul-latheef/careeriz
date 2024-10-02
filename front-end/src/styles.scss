@@ -1,10 +1,20 @@
-/* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 /* Importing Bootstrap SCSS file. */
 @import 'bootstrap/scss/bootstrap';
+
+
+
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: "Open Sans", sans-serif; }
+.mat-typography,
+.mat-mdc-tab,
+.mat-mdc-card-title{
+    font: 15px 'Open Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif !important;
+}
 
 
 .btn-orange{
