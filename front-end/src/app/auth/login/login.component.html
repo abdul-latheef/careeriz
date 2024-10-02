@@ -4,11 +4,11 @@
                 <img src="assets/image/logo.svg" alt="logo" class="logo">
                 <h5 class="text-left mb-4 fw-bolder">Login</h5>
                 <form action="">
-                    <mat-form-field appearance="fill">
+                    <mat-form-field appearance="outline">
                         <mat-label>Username</mat-label>
                         <input matInput>
                     </mat-form-field>
-                    <mat-form-field>
+                    <mat-form-field appearance="outline">
                         <mat-label>Password</mat-label>
                         <input matInput>
                     </mat-form-field>
@@ -16,10 +16,7 @@
                         <button type="button" class="btn btn-orange"  (click)="redirectToPage()">Submit</button>
                     </div>
                     <div class="text-center mt-2">
-                        <div>
-                            <p>(Or)</p>
-                        </div>
-                       <div>
+                      <div class="mt-2">
                         <button type="button" class="btn btn-outline-orange"  (click)="redirectToEmpLoginPage()">Employee Login</button>
                        </div> 
                     </div>

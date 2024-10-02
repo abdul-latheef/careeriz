@@ -11,7 +11,11 @@ html, body { height: 100%; }
 body { margin: 0; font-family: "Open Sans", sans-serif; }
 .mat-typography,
 .mat-mdc-tab,
-.mat-mdc-card-title{
+.mat-mdc-card-title,
+.mat-headline-medium,
+.mat-typography .mat-headline-medium,
+.mat-typography h5
+{
     font: 15px 'Open Sans', sans-serif;
     font-family: 'Open Sans', sans-serif !important;
 }
@@ -27,4 +31,7 @@ body { margin: 0; font-family: "Open Sans", sans-serif; }
 }
 .bg-orange{
     background-color: #de6d2e;
+}
+.text-orange{
+    color: #de6d2e;
 }
