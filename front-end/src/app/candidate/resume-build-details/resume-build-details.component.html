@@ -1,0 +1,574 @@
+<!-- Sidebar -->
+<div class="sidebar">
+    <!-- <img src="assets/image/logo.svg" alt="logo" class="logo"> -->
+    <h5 class="text-danger text-center mb-3">Careeriz</h5>
+    <div class="container">
+        <div class="careers-sidebar">
+            <ul class="stepper">
+                <li class="stepper-item active">
+                    <span class="step-counter">1</span>
+                    <div class="step-label">Heading</div>
+                </li>
+                <li class="stepper-item">
+                    <span class="step-counter">2</span>
+                    <div class="step-label">Work history</div>
+                </li>
+                <li class="stepper-item">
+                    <span class="step-counter">3</span>
+                    <div class="step-label">Education</div>
+                </li>
+                <li class="stepper-item">
+                    <span class="step-counter">4</span>
+                    <div class="step-label">Skills</div>
+                </li>
+                <li class="stepper-item">
+                    <span class="step-counter">5</span>
+                    <div class="step-label">Summary</div>
+                </li>
+                <li class="stepper-item">
+                    <span class="step-counter">6</span>
+                    <div class="step-label">Finalize</div>
+                </li>
+            </ul>
+            <div class="sidebar-footer">
+                <p class="mb-0"><a href="#" class="text-decoration-none text-white">Terms and Conditions</a></p>
+                <p class="mb-0"><a href="#" class="text-decoration-none text-white">Privacy Policy</a></p>
+                <p class="mb-0"><a href="#" class="text-decoration-none text-white">Accessibility</a></p>
+                <p class="mb-0"><a href="#" class="text-decoration-none text-white">Contact Us</a></p>
+                <p class="mt-3">© 2024, Works Limited. <br> All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Main content -->
+
+<div class="content">
+    <form [formGroup]="multiStepForm">
+        <!-- Step 1 -->
+        <div *ngIf="currentStep === 1">
+            <div class="container">
+                <div class="mt-4">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <mat-card-title class="fs-4">Fill up the details manually</mat-card-title>
+                            <div class="row mt-3">
+                                <div class="col-md-6">
+                                    <mat-form-field appearance="outline">
+                                        <mat-label>First Name</mat-label>
+                                        <input matInput>
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-6">
+                                    <mat-form-field appearance="outline">
+                                        <mat-label>Last Name</mat-label>
+                                        <input matInput>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="col-md-12">
+                                    <mat-form-field appearance="outline">
+                                        <mat-label>Profession</mat-label>
+                                        <input matInput>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="col-md-6">
+                                    <mat-form-field appearance="outline">
+                                        <mat-label>Enter your email</mat-label>
+                                        <input matInput placeholder="pat@example.com" required />
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-6">
+                                    <mat-form-field appearance="outline">
+                                        <mat-label>Phone Number</mat-label>
+                                        <input matInput type="tel">
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="col-md-12">
+                                    <mat-form-field class="example-full-width" appearance="outline">
+                                        <mat-label>Address</mat-label>
+                                        <textarea matInput></textarea>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="col-md-6">
+                                    <mat-form-field appearance="outline">
+                                        <mat-label>Any Work Permit Holding?</mat-label>
+                                        <mat-select>
+                                            <mat-option value="yes">Yes</mat-option>
+                                            <mat-option value="no">No</mat-option>
+                                        </mat-select>
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-6">
+                                    <mat-form-field class="example-full-width" appearance="outline">
+                                        <!-- Input field showing the selected values -->
+                                        <mat-select placeholder="Language Knows" multiple [(ngModel)]="selectedItems">
+                                            <!-- Loop through the dropdownItems array and add a checkbox for each option -->
+                                            <mat-option *ngFor="let item of dropdownItems" [value]="item">
+                                                {{ item }}
+                                            </mat-option>
+                                        </mat-select>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="col-md-6">
+                                    <mat-form-field appearance="outline">
+                                        <mat-label>Gender</mat-label>
+                                        <mat-select>
+                                            <mat-option value="male">Male</mat-option>
+                                            <mat-option value="female">Female</mat-option>
+                                            <mat-option value="transgender">TransGender</mat-option>
+                                        </mat-select>
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-6">
+                                    <mat-form-field appearance="outline">
+                                        <mat-label>Marital Status</mat-label>
+                                        <mat-select>
+                                            <mat-option value="married">Married</mat-option>
+                                            <mat-option value="unmarried">Unmarried</mat-option>
+                                        </mat-select>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="">
+                                <p>Our Resume Builder delivers results †</p>
+                                <!-- <div class="notify-section border w-75  rounded-pill bg-danger">
+                                    <p class="text-center mt-2 text-white">lorem ipsum dolor sit</p>
+                                </div> -->
+                                <div class="resume-template mt-3">
+                                    <img src="https://placehold.co/280x350" alt="">
+                                </div>
+                                <div class="mt-3">
+                                    <a href="#">Change template</a>
+                                </div>
+                                <div class="mt-3 w-75 ">
+                                    <p> The results are based on a study with over 1000 participants, among whom 287
+                                        used resume
+                                        tools provided on our family sites.</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-2 pb-5">
+                        <div class="col-md-8">
+                            <div class="btn btn-primary w-50 btn-lg rounded-pill">Optional: Personal Details</div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="btn btn-warning w-50 btn-lg rounded-pill" (click)="nextStep()">Next</div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+        <!-- Step 2 -->
+        <div *ngIf="currentStep === 2">
+            <div class="container">
+                <div class="mt-4">
+                    <div class="row">
+                        <div class="col-md-8">
+
+                            <mat-card-header class="mt-3">
+                                <div class="container">
+                                    <mat-card-title class="fs-4 mb-4">Fill up the details manually</mat-card-title>
+                                </div>
+                            </mat-card-header>
+                            <mat-card-content class="">
+                                <form action="">
+                                    <div class="container">
+                                        <div class="row mt-4">
+                                            <div class="col-md-6">
+                                                <mat-form-field appearance="outline">
+                                                    <mat-label>Total Work Experience (Years)</mat-label>
+                                                    <input matInput type="number" min="0" placeholder="Years">
+                                                </mat-form-field>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <mat-form-field appearance="outline">
+                                                    <mat-label>Total Work Experience (Months)</mat-label>
+                                                    <input matInput type="number" min="0" max="11" placeholder="Months">
+                                                </mat-form-field>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <mat-form-field appearance="outline">
+                                                    <mat-label>Gap in Experience (Months)</mat-label>
+                                                    <input matInput type="number" min="0" max="11" placeholder="Months">
+                                                </mat-form-field>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <mat-form-field appearance="outline">
+                                                    <mat-label>Gap in Experience (Months)</mat-label>
+                                                    <input matInput type="number" min="0" max="11" placeholder="Months">
+                                                </mat-form-field>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <mat-form-field appearance="outline">
+                                                    <mat-label>Profile Summary</mat-label>
+                                                    <textarea matInput placeholder="Enter your profile summary here..."
+                                                        rows="3" [(ngModel)]="profileSummary"></textarea>
+                                                    <mat-hint>Provide a brief overview of your professional
+                                                        background, skills, and
+                                                        achievements.</mat-hint>
+                                                </mat-form-field>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                                <mat-card-header class="">
+                                    <div class="container mt-4">
+                                        <mat-card-title class="fs-4">Current Company</mat-card-title>
+                                    </div>
+                                </mat-card-header>
+                                <form action="">
+                                    <div class="container">
+                                        <div class="mt-3">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <mat-form-field appearance="outline">
+                                                        <mat-label>Company Name</mat-label>
+                                                        <input matInput>
+                                                    </mat-form-field>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <mat-form-field appearance="outline">
+                                                        <mat-label>Designation</mat-label>
+                                                        <input matInput>
+                                                    </mat-form-field>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <mat-form-field appearance="outline">
+                                                        <mat-label>Industry Domain</mat-label>
+                                                        <mat-select placeholder="Select industry domain">
+                                                            <mat-option *ngFor="let domain of industryDomains"
+                                                                [value]="domain">
+                                                                {{ domain }}
+                                                            </mat-option>
+                                                        </mat-select>
+                                                    </mat-form-field>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <mat-form-field appearance="outline">
+                                                        <mat-label>Start From Date</mat-label>
+                                                        <input matInput [matDatepicker]="picker">
+                                                        <mat-hint>MM/DD/YYYY</mat-hint>
+                                                        <mat-datepicker-toggle matIconSuffix
+                                                            [for]="picker"></mat-datepicker-toggle>
+                                                        <mat-datepicker #picker></mat-datepicker>
+                                                    </mat-form-field>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <mat-form-field appearance="outline">
+                                                        <mat-label>Job Mode</mat-label>
+                                                        <mat-select>
+                                                            <mat-option value="option1">Remote</mat-option>
+                                                            <mat-option value="option2">Hybrid</mat-option>
+                                                            <mat-option value="option3">In-office</mat-option>
+                                                        </mat-select>
+                                                    </mat-form-field>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <mat-form-field appearance="outline">
+                                                        <mat-label>Job type</mat-label>
+                                                        <mat-select>
+                                                            <mat-option value="option1">Option 1</mat-option>
+                                                            <mat-option value="option2">Option 2</mat-option>
+                                                        </mat-select>
+                                                    </mat-form-field>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <mat-form-field class="example-full-width" appearance="outline">
+                                                        <mat-label>Roles & Responsibility</mat-label>
+                                                        <textarea matInput></textarea>
+                                                    </mat-form-field>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <mat-form-field class="example-full-width" appearance="outline">
+                                                        <mat-label>Project Details</mat-label>
+                                                        <textarea matInput></textarea>
+                                                    </mat-form-field>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <mat-form-field appearance="outline">
+                                                        <mat-label>Clients Handled / Onboarded</mat-label>
+                                                        <input matInput placeholder="Enter number of clients"
+                                                            type="number">
+                                                    </mat-form-field>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <mat-form-field appearance="outline">
+                                                        <mat-label>Team Handled</mat-label>
+                                                        <input matInput placeholder="Enter team size" type="number">
+                                                    </mat-form-field>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <mat-form-field appearance="outline">
+                                                        <mat-label>Key Skill Set</mat-label>
+                                                        <textarea matInput placeholder="Enter key skills"
+                                                            rows="3"></textarea>
+                                                    </mat-form-field>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+
+                            </mat-card-content>
+
+                        </div>
+                        <div class="col-md-4">
+                            <div class="">
+                                <p>Our Resume Builder delivers results †</p>
+                                <!-- <div class="notify-section border w-75  rounded-pill bg-danger">
+                                    <p class="text-center mt-2 text-white">lorem ipsum dolor sit</p>
+                                </div> -->
+                                <div class="resume-template mt-3">
+                                    <img src="https://placehold.co/280x350" alt="">
+                                </div>
+                                <div class="mt-3">
+                                    <a href="#">Change template</a>
+                                </div>
+                                <div class="mt-3 w-75 ">
+                                    <p> The results are based on a study with over 1000 participants, among whom 287
+                                        used resume
+                                        tools provided on our family sites.</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-2 pb-5">
+                        <div class="col-md-8">
+                            <div class="btn btn-primary w-50 btn-lg rounded-pill" (click)="previousStep()">Previous
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="btn btn-warning w-50 btn-lg rounded-pill" (click)="nextStep()">Next</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <!-- Step 3 -->
+        <div *ngIf="currentStep === 3">
+            <div class="container">
+                <div class="mt-4">
+                    <div class="row">
+                        <div class="col-md-8">
+                            
+                                <mat-card-header class="mt-3">
+                                    <div class="container">
+                                        <mat-card-title class="fs-4">Educational Background</mat-card-title>
+                                    </div>
+                                </mat-card-header>
+                                <mat-card-content class="">
+                                    <form action="">
+                                        <div class="container">
+                                            <div class="row mt-4">
+                                                <div class="col-md-6">
+                                                    <mat-form-field appearance="outline">
+                                                        <mat-label>Degree / Schooling</mat-label>
+                                                        <input matInput placeholder="Enter your degree/schooling"
+                                                            required>
+                                                    </mat-form-field>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <mat-form-field appearance="outline">
+                                                        <mat-label>University</mat-label>
+                                                        <input matInput placeholder="Enter your university name"
+                                                            required>
+                                                    </mat-form-field>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <mat-form-field appearance="outline">
+                                                        <mat-label>Year of Passing</mat-label>
+                                                        <input matInput placeholder="YYYY" required pattern="\d{4}">
+                                                        <mat-error>Invalid year</mat-error>
+                                                    </mat-form-field>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <mat-form-field appearance="outline">
+                                                        <mat-label>Percentage</mat-label>
+                                                        <input matInput type="number" placeholder="Enter percentage"
+                                                            required min="0" max="100">
+                                                        <mat-hint>Enter a value between 0 and 100</mat-hint>
+                                                    </mat-form-field>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <mat-form-field appearance="outline">
+                                                        <mat-label>Degree - Project Details</mat-label>
+                                                        <textarea matInput
+                                                            placeholder="Enter details about your degree project"
+                                                            rows="3"></textarea>
+                                                    </mat-form-field>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <mat-form-field appearance="outline">
+                                                        <mat-label>Master - Project Details</mat-label>
+                                                        <textarea matInput
+                                                            placeholder="Enter details about your master's project"
+                                                            rows="3"></textarea>
+                                                    </mat-form-field>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <mat-form-field appearance="outline">
+                                                        <mat-label>Campus Placement</mat-label>
+                                                        <mat-select [(value)]="placementStatus" required>
+                                                            <mat-option value="got">Got</mat-option>
+                                                            <mat-option value="not">Not</mat-option>
+                                                        </mat-select>
+                                                    </mat-form-field>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <mat-form-field appearance="outline"
+                                                        *ngIf="placementStatus === 'got'">
+                                                        <mat-label>Company Name</mat-label>
+                                                        <input matInput placeholder="Enter the company name" required>
+                                                    </mat-form-field>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </mat-card-content>
+                                <mat-card-header class="mt-3">
+                                    <div class="container">
+                                        <mat-card-title class="fs-4">Desired career profile</mat-card-title>
+                                    </div>
+                                </mat-card-header>
+                                <mat-card-content class="">
+                                    <form action="">
+                                        <div class="container mt-3">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <mat-form-field appearance="outline">
+                                                        <mat-label>Industry Domain</mat-label>
+                                                        <mat-select>
+                                                            <mat-option value="technology">Technology</mat-option>
+                                                            <mat-option value="healthcare">Healthcare</mat-option>
+                                                            <mat-option value="finance">Finance</mat-option>
+                                                            <mat-option value="education">Education</mat-option>
+                                                        </mat-select>
+                                                    </mat-form-field>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <mat-form-field appearance="outline">
+                                                        <mat-label>Department</mat-label>
+                                                        <mat-select>
+                                                            <mat-option value="hr">HR</mat-option>
+                                                            <mat-option value="IT">IT</mat-option>
+                                                            <mat-option value="Sales">Sales</mat-option>
+                                                            <mat-option value="Marketing">Marketing</mat-option>
+                                                        </mat-select>
+                                                    </mat-form-field>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <mat-form-field appearance="outline">
+                                                        <mat-label>Role Category</mat-label>
+                                                        <mat-select>
+                                                            <mat-option value="management">Management</mat-option>
+                                                            <mat-option value="engineering">Engineering</mat-option>
+                                                            <mat-option value="operations">Operations</mat-option>
+                                                            <mat-option value="support">Support</mat-option>
+                                                        </mat-select>
+                                                    </mat-form-field>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <mat-form-field appearance="outline">
+                                                        <mat-label>Job Role</mat-label>
+                                                        <mat-select>
+                                                            <mat-option value="Manager">Manager</mat-option>
+                                                            <mat-option value="Software Engineer">Software
+                                                                Engineer</mat-option>
+                                                            <mat-option value="Operations Coordinator">Operations
+                                                                Coordinator</mat-option>
+                                                            <mat-option value="Technical Support">Technical
+                                                                Support</mat-option>
+                                                        </mat-select>
+                                                    </mat-form-field>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </mat-card-content>
+                            
+                        </div>
+                        <div class="col-md-4">
+                            <div class="">
+                                <p>Our Resume Builder delivers results †</p>
+                                <!-- <div class="notify-section border w-75  rounded-pill bg-danger">
+                                    <p class="text-center mt-2 text-white">lorem ipsum dolor sit</p>
+                                </div> -->
+                                <div class="resume-template mt-3">
+                                    <img src="https://placehold.co/280x350" alt="">
+                                </div>
+                                <div class="mt-3">
+                                    <a href="#">Change template</a>
+                                </div>
+                                <div class="mt-3 w-75 ">
+                                    <p> The results are based on a study with over 1000 participants, among whom 287
+                                        used resume
+                                        tools provided on our family sites.</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-2 pb-5">
+                        <div class="col-md-8">
+                            <div class="btn btn-primary w-50 btn-lg rounded-pill" (click)="previousStep()">Previous
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="btn btn-warning w-50 btn-lg rounded-pill" (click)="onSubmit()">Submit</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <button type="button" class="btn btn-primary" (click)="previousStep()">Previous</button>
+                <button type="submit" class="btn btn-warning" (click)="onSubmit()">Submit</button> -->
+            </div>
+        </div>
+    </form>
+
+</div>

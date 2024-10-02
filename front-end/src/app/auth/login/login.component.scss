@@ -1,11 +1,27 @@
-mat-form-field{
+mat-form-field {
     width: 100%;
 }
-.logo{
+
+.logo {
     max-width: 50%;
     margin: 0 auto;
     display: block;
 }
-.bg-orange{
+
+.bg-orange {
     background: #de6d2e;
+}
+
+button{
+    width: 100%;
+}
+
+.btn-outline-orange {    
+    color: #de6d2e;
+    border-color: #de6d2e;
+}
+
+.btn-outline-orange:hover {
+    background-color: #de6d2e;
+    color: white;
 }

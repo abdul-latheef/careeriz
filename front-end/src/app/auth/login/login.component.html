@@ -1,5 +1,4 @@
-<div class="">
-    
+<div class="">    
         <div class="d-flex justify-content-center align-items-center min-vh-100 bg-orange">
             <div class="p-5 pt-3 shadow rounded max-w-25 bg-white">
                 <img src="assets/image/logo.svg" alt="logo" class="logo">
@@ -13,8 +12,16 @@
                         <mat-label>Password</mat-label>
                         <input matInput>
                     </mat-form-field>
-                    <div class="text-center">
+                    <div class="text-center mt-2">
                         <button type="button" class="btn btn-orange"  (click)="redirectToPage()">Submit</button>
+                    </div>
+                    <div class="text-center mt-2">
+                        <div>
+                            <p>(Or)</p>
+                        </div>
+                       <div>
+                        <button type="button" class="btn btn-outline-orange"  (click)="redirectToEmpLoginPage()">Employee Login</button>
+                       </div> 
                     </div>
                 </form>
             </div>
