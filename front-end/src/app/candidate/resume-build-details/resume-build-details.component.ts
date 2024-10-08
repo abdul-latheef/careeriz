@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, HostListener } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
@@ -25,6 +25,19 @@ import { CommonModule } from '@angular/common';
   styleUrl: './resume-build-details.component.scss'
 })
 export class ResumeBuildDetailsComponent {
+  sidebarTop: string = '69px'; // Default top value for the sidebar
+
+  // Listen to window scroll events
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    if (scrollPosition > 69) {
+      this.sidebarTop = '0px'; // If scrolled past the header, set top to 0
+    } else {
+      this.sidebarTop = '69px'; // Otherwise, set it to 69px
+    }
+  }
+
   // Array to hold selected options
   selectedItems: string[] = [];
 
