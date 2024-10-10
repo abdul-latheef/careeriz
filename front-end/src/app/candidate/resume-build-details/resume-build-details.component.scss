@@ -1,3 +1,8 @@
+nav{
+    z-index: 99;
+}
+
+
 mat-form-field {
     width: 100%;
 }
@@ -39,7 +44,7 @@ body {
 }
 
 .content {
-    // margin-left: 250px;
+    margin-left: 250px;
     /* Adjust the margin to the width of the sidebar */
 }
 

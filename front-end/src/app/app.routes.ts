@@ -8,10 +8,7 @@ import { EmployeeLoginComponent } from './candidate/employee-login/employee-logi
 
 export const routes: Routes = [
   { path: '', component: LoginComponent },
-  {
-    path: 'resume-build-details',
-    component: ResumeBuildDetailsComponent
-  },  
+   
   {
     path: 'candidate',
     children: [
@@ -27,6 +24,10 @@ export const routes: Routes = [
         path: 'resume-build',
         component: ResumeBuildComponent
       },
+      {
+        path: 'resume-build-details',
+        component: ResumeBuildDetailsComponent
+      }, 
       {
         path: 'employee-login',
         component: EmployeeLoginComponent

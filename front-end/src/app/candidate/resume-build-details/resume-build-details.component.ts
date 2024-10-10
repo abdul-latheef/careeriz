@@ -13,7 +13,7 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatIconModule } from '@angular/material/icon';
 import { JsonPipe } from '@angular/common';
-import { FormBuilder, ReactiveFormsModule,FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, ReactiveFormsModule, FormGroup, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -25,16 +25,16 @@ import { CommonModule } from '@angular/common';
   styleUrl: './resume-build-details.component.scss'
 })
 export class ResumeBuildDetailsComponent {
-  sidebarTop: string = '69px'; // Default top value for the sidebar
+  sidebarTop: string = '58px'; // Default top value for the sidebar
 
   // Listen to window scroll events
   @HostListener('window:scroll', [])
   onWindowScroll() {
     const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-    if (scrollPosition > 69) {
+    if (scrollPosition > 58) {
       this.sidebarTop = '0px'; // If scrolled past the header, set top to 0
     } else {
-      this.sidebarTop = '69px'; // Otherwise, set it to 69px
+      this.sidebarTop = '58px'; // Otherwise, set it to 69px
     }
   }
 
@@ -50,7 +50,7 @@ export class ResumeBuildDetailsComponent {
   constructor(private fb: FormBuilder) {
     this.multiStepForm = this.fb.group({
       name: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]]      
+      email: ['', [Validators.required, Validators.email]]
     });
   }
 
