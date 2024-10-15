@@ -1,0 +1,30 @@
+.short-name {
+    width: 150px;
+    white-space: nowrap;
+}
+
+mat-card .job-notify{
+    .job-title{
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 3px;
+        width: 100%;
+    }
+
+    .job-desc{
+        width: 600px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .job-skills, .apply-date{
+        font-size: 12px;
+    }
+}
+
+.simple-checkboxes{
+    mat-checkbox{
+        width: 100% !important;
+    }
+}

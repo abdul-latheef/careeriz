@@ -1,5 +1,3 @@
-
-
 /* Importing Bootstrap SCSS file. */
 @import 'bootstrap/scss/bootstrap';
 
@@ -7,31 +5,51 @@
 
 
 
-html, body { height: 100%; }
-body { margin: 0; font-family: "Open Sans", sans-serif; }
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+}
+
 .mat-typography,
 .mat-mdc-tab,
 .mat-mdc-card-title,
 .mat-headline-medium,
 .mat-typography .mat-headline-medium,
-.mat-typography h5
-{
+.mat-typography h5 {
     font: 15px 'Open Sans', sans-serif;
     font-family: 'Open Sans', sans-serif !important;
 }
 
 
-.btn-orange{
+.btn-orange {
     background-color: #de6d2e;
     color: #fff;
 }
-.btn-orange:hover{
+
+.btn-orange:hover {
     border: 1px solid #de6d2e;
     color: #de6d2e;
 }
-.bg-orange{
+
+.bg-orange {
     background-color: #de6d2e;
 }
-.text-orange{
+
+.text-orange {
     color: #de6d2e;
+}
+
+.btn-outline-orange {
+    color: #de6d2e;
+    border-color: #de6d2e;
+}
+
+.btn-outline-orange:hover {
+    background-color: #de6d2e;
+    color: white;
 }

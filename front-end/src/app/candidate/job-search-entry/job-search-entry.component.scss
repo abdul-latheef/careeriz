@@ -1,0 +1,30 @@
+.job-search-entry {
+    .heading {
+        font-weight: 800;
+        margin-bottom: 5px;
+    }
+
+    .sub-heading {
+        font-size: 20px;
+    }
+}
+
+.search-box {
+    width: 100%;
+}
+
+.mat-form-field {
+    display: flex;
+    align-items: center;
+}
+
+.search-button {
+    margin-left: auto;
+    height: 100%;
+    background-color: red !important;
+    color: #204260 !important;
+}
+
+mat-form-field .mat-mdc-text-field-wrapper{
+    background-color: white !important;
+}

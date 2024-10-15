@@ -1,0 +1,33 @@
+<mat-card>
+    <mat-card-header class="text-center mb-4">
+        <mat-card-title class="title-1">Are you uploading an existing resume?</mat-card-title>
+        <mat-card-title class="title-2">Just review, edit, and update it with new information</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="border border-dark rounded-3">
+                    <i class="fa-solid fa-file-arrow-up"></i>
+                    <h5>Yes, upload from my resume</h5>
+                    <p class="text-center">We'll give you expert guidance to fill out your info and enhance your
+                        resume, from start to
+                        finish</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="border border-dark rounded-3">
+                    <i class="fa-solid fa-file-pen"></i>
+                    <h5>No, start from scratch</h5>
+                    <p class="text-center">We'll guide you through the whole process so your skills can shine</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="text-end next-button mt-4">
+                    <button class="btn btn-orange btn-lg rounded-pill" (click)="navigateToRoute()">Next</button>
+                </div>
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>
