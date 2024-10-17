@@ -8,6 +8,7 @@ import { EmployeeLoginComponent } from './candidate/employee-login/employee-logi
 import { JobSearchComponent } from './candidate/job-search/job-search.component';
 import { LoginTypeComponent } from './auth/login/login-type/login-type.component';
 import { AddJobComponent } from './admin/add-job/add-job.component';
+import { JobDescriptionComponent } from './candidate/job-description/job-description.component';
 
 
 export const routes: Routes = [
@@ -40,6 +41,10 @@ export const routes: Routes = [
       {
         path: 'job-search',
         component: JobSearchComponent
+      },
+      {
+        path: 'job-desc',
+        component: JobDescriptionComponent
       }
     ],
   },

@@ -3,6 +3,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-job-search',
@@ -13,4 +14,10 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 })
 export class JobSearchComponent {
   experience: number = 10;
+
+  constructor(private router: Router) {}
+
+  navigateToDetails() {
+    this.router.navigate(['candidate/job-desc']);
+  }
 }
