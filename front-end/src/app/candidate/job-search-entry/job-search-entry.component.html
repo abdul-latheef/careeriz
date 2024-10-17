@@ -1,11 +1,19 @@
-<div class="text-center job-search-entry mt-4">
-    <h3 class="heading">Find your dream job now</h3>
-    <h5 class="sub-heading">5 lakh+ jobs for you to explore</h5>
-    <mat-form-field appearance="outline" class="search-box mt-3">
-        <mat-label>Search</mat-label>
-        <input matInput [(ngModel)]="searchTerm" placeholder="Search for Jobs..." class="search-input">
-        <button mat-button matSuffix (click)="onSearch()" class="search-button">
-            Search
-        </button>
-    </mat-form-field>
-</div>
+
+
+<mat-card class="example-card" appearance="outlined">
+    <mat-card-header>
+    </mat-card-header>
+    <mat-card-content>
+        <div class="text-center job-search-entry mt-4 px-5">
+            <h3 class="heading">Find your dream job now</h3>
+            <h5 class="sub-heading">5 lakh+ jobs for you to explore</h5>
+            <mat-form-field appearance="outline" class="search-box mt-3">
+                <mat-label>Search</mat-label>
+                <input matInput [(ngModel)]="searchTerm" placeholder="Search for Jobs..." class="search-input">
+                <button mat-button matSuffix (click)="onSearch()" class="search-button">
+                    Search
+                </button>
+            </mat-form-field>
+        </div>
+    </mat-card-content>
+</mat-card>

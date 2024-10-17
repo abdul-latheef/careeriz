@@ -20,7 +20,11 @@ body {
 .mat-mdc-card-title,
 .mat-headline-medium,
 .mat-typography .mat-headline-medium,
-.mat-typography h5 {
+.mat-typography h5,
+.mat-mdc-checkbox .mat-internal-form-field,
+.mat-expansion-panel-header,
+.mat-expansion-panel-content
+{
     font: 15px 'Open Sans', sans-serif;
     font-family: 'Open Sans', sans-serif !important;
 }

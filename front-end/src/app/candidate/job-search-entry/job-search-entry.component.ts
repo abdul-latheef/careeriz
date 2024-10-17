@@ -5,11 +5,12 @@ import { MatIconModule } from '@angular/material/icon';
 import { FormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { Router } from '@angular/router';
+import { MatCardModule } from '@angular/material/card';
 
 @Component({
   selector: 'app-job-search-entry',
   standalone: true,
-  imports: [MatInputModule, MatFormFieldModule, MatIconModule, FormsModule, MatButtonModule],
+  imports: [MatCardModule, MatInputModule, MatFormFieldModule, MatIconModule, FormsModule, MatButtonModule],
   templateUrl: './job-search-entry.component.html',
   styleUrl: './job-search-entry.component.scss'
 })

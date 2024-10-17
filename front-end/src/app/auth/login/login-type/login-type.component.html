@@ -4,9 +4,9 @@
             <img src="assets/image/logo.svg" alt="logo" class="logo">
             <h5 class="text-left mb-4 fw-bolder text-center text-login">Login</h5>
 
-            <mat-radio-group [(ngModel)]="selectedOption" name="options">
-                <mat-radio-button value="option1"><span style="font-size: 25px;">Employee</span></mat-radio-button><br>
-                <mat-radio-button value="option2"><span style="font-size: 25px;">Employer</span></mat-radio-button>
+            <mat-radio-group [(ngModel)]="selectedOption" name="options" appearance="outline">
+                <mat-radio-button value="option1"><span style="font-size: 20px;">Employee</span></mat-radio-button><br>
+                <mat-radio-button value="option2"><span style="font-size: 20px;">Employer</span></mat-radio-button>
             </mat-radio-group>
             <div class="text-center mt-4">
                 <button type="button" class="btn btn-orange"  (click)="redirectToPage()">Submit</button>
