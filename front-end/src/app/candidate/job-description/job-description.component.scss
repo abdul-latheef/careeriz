@@ -6,7 +6,115 @@ mat-card .job-notify {
         width: 100%;
     }
 
-    .posted-date p{
+    .posted-date p {
         font-size: 12px;
     }
+}
+
+.job-description {
+    background: #fef4ea;
+
+    .date-border {
+        width: 110px;
+        text-align: center;
+        padding: 5px;
+        border-radius: 50px;
+        font-size: 12px;
+    }
+
+    .date-border p {
+        margin: auto;
+    }
+
+    .date-border i {
+        font-size: 11px;
+    }    
+}
+
+.main-mat-card mat-card-header {
+    display: block !important;
+}
+
+.main-job-title {
+    font-size: 21px;
+    font-weight: 600;
+}
+
+.job-main-desc {
+    margin-top: 17px;
+
+    .job-desc {
+        font-size: 13px;
+    }
+
+    .sub-details i{
+        font-size: 25px;
+        margin-right: 10px;
+        margin-top: 5px;
+        color: #de6d2e;
+    }
+
+    .sub-details p{
+        font-size: 13px;
+    }
+}
+
+.text-right {
+    text-align: -webkit-right !important;
+}
+
+.skill-border {
+    width: 150px;
+    text-align: center;
+    padding: 5px;
+    border-radius: 50px;
+    font-size: 12px;
+}
+
+.skill-border p{
+    margin: auto;
+}
+
+.skill-border i {
+    font-size: 11px;
+} 
+
+.border-color-1{
+    background-color: #f1e3ff !important;
+    width: 130px !important;
+    p{
+        color: #662c9e !important;
+        font-weight: bold;
+    }
+}
+
+.border-color-2{
+    background-color: #e3fff0 !important;
+    width: 130px !important;
+    p{
+        color: #129035;
+        font-weight: bold;
+    }
+}
+
+.border-color-3{
+    background-color: #ffede3 !important;
+    width: 130px !important;
+    p{
+        color: #945418;
+        font-weight: bold;
+    }
+}
+
+.posted-date p{
+    font-size: 13px;
+}
+
+@media only screen and (min-width:1400px) {
+    .job-main-desc {
+        .job-desc {
+            font-size: 14px;
+        }
+    }
+
 }
