@@ -11,6 +11,11 @@
     background: #fef4ea;
 }
 
+mat-card-content .fa-solid,
+mat-card-content .fa-regular{
+    color: #a19b9b !important;
+}
+
 mat-card .job-notify{
     .job-title{
         font-size: 18px;

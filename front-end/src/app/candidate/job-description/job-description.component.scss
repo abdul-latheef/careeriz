@@ -35,6 +35,11 @@ mat-card .job-notify {
     display: block !important;
 }
 
+mat-card-content .list-design{
+    line-height: 30px;
+    color: #4d4646;
+}
+
 .main-job-title {
     font-size: 21px;
     font-weight: 600;
@@ -45,6 +50,7 @@ mat-card .job-notify {
 
     .job-desc {
         font-size: 13px;
+        color: #4d4646;
     }
 
     .sub-details i{
